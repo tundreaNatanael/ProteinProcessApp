@@ -6,8 +6,14 @@ import java.util.Map;
 import java.util.HashMap;
 
 public class ProteinProcessApp {
+	public ProteinProcessApp() {}
 	
-	public void ProteinProcessAppMethod(String inFilePath, String outFilePath, int keyLength)
+	public ProteinProcessApp(String inFilePath, String outFilePath, int keyLength)
+	{
+		ProcessMethod(inFilePath, outFilePath, keyLength);
+	}
+	
+	public void ProcessMethod(String inFilePath, String outFilePath, int keyLength)
 	{
 		Map<String, Integer> map = new HashMap<>();
 		try (BufferedReader reader = new BufferedReader(new FileReader(inFilePath))) {

@@ -12,19 +12,15 @@ public class Main {
         String outFilePath = scanner.nextLine();
 
         // User preferences
-        System.out.print(">>> Introduce the length of the first key: ");
-        int key1Length = scanner.nextInt();
-        scanner.nextLine();  // Consume the newline character left by nextInt()
-
-        System.out.print(">>> Introduce the length of the second key: ");
-        int key2Length = scanner.nextInt();
+        System.out.print(">>> Introduce the length of the search key: ");
+        int keyLength = scanner.nextInt();
         scanner.nextLine();  // Consume the newline character left by nextInt()
 
 		scanner.close();
 		
 		//calling the function
 		ProteinProcessApp App1=new ProteinProcessApp();
-		App1.ProteinProcessAppMethod(inFilePath, outFilePath, key1Length+key2Length);
+		App1.ProcessMethod(inFilePath, outFilePath, keyLength);
 	}
 
 }
